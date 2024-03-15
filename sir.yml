@@ -85,6 +85,7 @@
         src: tomcat.service
         dest: "/etc/systemd/system/tomcat.service"
         mode: '755'
+      become: yes
       notify:
         - start tomcat
   handlers:
