@@ -84,6 +84,7 @@
       ansible.builtin.copy:
         src: tomcat.service
         dest: "/etc/systemd/system/tomcat.service"
+        mode: '640'
       notify:
         - start tomcat
   handlers:
