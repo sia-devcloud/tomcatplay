@@ -79,6 +79,7 @@
         owner: "{{ user }}"
         group: "{{ group }}"
         mode: '0640'
+      become: yes
     - name: Create a Systemd Service File
       ansible.builtin.copy:
         src: tomcat.service
