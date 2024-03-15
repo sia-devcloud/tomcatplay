@@ -63,6 +63,7 @@
         owner: "{{ user }}"
         group: "{{ group }}"
         mode: '0600'
+      become: yes
     - name: allow remote hosts for manager
       ansible.builtin.copy:
         src: manager-context.xml
