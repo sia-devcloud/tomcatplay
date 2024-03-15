@@ -76,7 +76,6 @@
       ansible.builtin.copy:
         src: tomcat.service
         dest: "/etc/systemd/system/tomcat.service"
-        mode: '755'
     - name: start tomcat
       ansible.builtin.service:
         name: tomcat
