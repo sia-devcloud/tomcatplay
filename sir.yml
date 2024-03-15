@@ -56,7 +56,7 @@
       become: yes
       loop: "{{ shell_files.files }}"
      - name: create tomcat application accounts
-      ansible.builtin.copy:
+       ansible.builtin.copy:
         src: files/tomcat-users.xml
         dest: "/opt/tomcat/apache-tomcat-10.0.10/conf/tomcat-users.xml"
         owner: "{{ user }}"
