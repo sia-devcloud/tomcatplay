@@ -80,7 +80,7 @@
         - start tomcat
   handlers:
     - name: start tomcat
-      ansible.builtin.service:
+      ansible.builtin.systemd.service:
         name: tomcat
         enabled: yes
         daemon_reload: yes
