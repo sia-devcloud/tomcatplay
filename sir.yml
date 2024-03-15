@@ -47,6 +47,7 @@
         paths: "/opt/tomcat/apache-tomcat-10.0.10/bin"
         patterns: '*.sh'
       register: shell_files
+      become: yes
     - name: change permissions to execute
       file:
         path: "{{ item.path }}"
