@@ -76,8 +76,11 @@
       ansible.builtin.copy:
         src: tomcat.service
         dest: "/etc/systemd/system/tomcat.service"
+      notify:
+        - start tomcat
+  handlers:
     - name: start tomcat
-      ansible.builtin.service:
+      ansible.builtin.systemd.service:
         name: tomcat
         enabled: yes
         daemon_reload: yes
